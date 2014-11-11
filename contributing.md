@@ -35,5 +35,6 @@ Some great examples could be stuff like:
 - using ampersand with API stubs like: https://github.com/HenrikJoreteg/hapi-dummy-api
 - testing clientside code on the server
 - showing various testing approaches for apps
+- different authentication approaches
 
 Thanks! 
