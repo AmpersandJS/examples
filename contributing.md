@@ -1,10 +1,12 @@
-# contributing an example
+# How to contribute an example
 
-Hi! So glad you're wanting to contribute. 
+Hi there. So glad you're wanting to contribute!
 
-This collection is curated by the core ampersand team. 
+This collection of patterns submitted by ampersand users, and curated by the core team.
 
-A wide variety of examples is great! But to make sure your efforts are not wasted, we suggest you file an issue first describing what you're planning on submitting.
+We want a really broad range of examples to show ampersand's flexibility!
+
+To make sure your efforts are not wasted, we suggest you file an issue first describing what you're planning on submitting.
 
 Also, in order to keep them as digestible and usable as possible here's a few rough guidelines.
 
@@ -33,3 +35,5 @@ Some great examples could be stuff like:
 - using ampersand with API stubs like: https://github.com/HenrikJoreteg/hapi-dummy-api
 - testing clientside code on the server
 - showing various testing approaches for apps
+
+Thanks! 
