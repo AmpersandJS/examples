@@ -1,4 +1,4 @@
-# examples pattterns recipies
+# examples patterns recipes
 
 We're starting this collection of patterns and approaches submitted by the community for building with [Ampersand.js](http://ampersandjs.com).
 
