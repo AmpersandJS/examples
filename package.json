@@ -1,0 +1,24 @@
+{
+  "name": "example-apps",
+  "description": "A collection of patterns and approaches for building with ampersand.",
+  "version": "1.0.0",
+  "author": "Henrik Joreteg <henrik@andyet.net>",
+  "bugs": {
+    "url": "https://github.com/ampersandjs/example-apps/issues"
+  },
+  "homepage": "https://github.com/ampersandjs/example-apps",
+  "keywords": [
+    "ampersand",
+    "examples",
+    "patterns"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ampersandjs/example-apps"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
