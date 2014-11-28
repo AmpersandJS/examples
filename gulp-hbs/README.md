@@ -2,7 +2,7 @@
 
 This app was generated with the 'express' flavor of ampersand via the [ampersand cli tool](http://ampersandjs.com/learn/quick-start-guide).
 
-## Why Hanldebars?
+## Why Handlebars?
 
 It's personal preference, but I like [Handlebars](http://handlebarsjs.com/) much better than [jade](http://jade-lang.com/). Whitespace-sensitive syntax has never seemed compelling to me. I'm looking at you- YAML, HAML, Python, and ... CoffeeScript. So, one of my first tasks when starting an Ampersand project was to switch out `jade` for something else. `handlebars` was recommended on the [Ampersand Learn](http://ampersandjs.com/learn/templates) page and is much more HTML-like.
 
