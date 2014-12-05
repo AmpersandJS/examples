@@ -1,0 +1,26 @@
+{
+  "name": "ampersand-domthing-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "beefy -t domthingify app.js"
+  },
+  "browserify": {
+    "transform": [
+      "domthingify"
+    ]
+  },
+  "author": "Philip Roberts <phil@andyet.com>",
+  "license": "ISC",
+  "dependencies": {
+    "ampersand-domthing-mixin": "^0.1.0",
+    "ampersand-state": "^4.4.1",
+    "ampersand-view": "^7.2.0",
+    "domthing": "^0.3.1"
+  },
+  "devDependencies": {
+    "beefy": "^2.1.1",
+    "domthingify": "^0.2.0"
+  }
+}
