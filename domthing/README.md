@@ -6,6 +6,18 @@ It has a syntax similar to mustache/handlebars, and currently has support for bi
 
 This repo demonstrates in a very simple form how to get domthing working with ampersand, and is a working demo of the bindings working.
 
+## Running the demo
+
+Follow these steps.
+
+```
+git clone https://github.com/ampersandjs/examples # clone this repo
+cd examples/domthing                              # cd into the domthing directory
+npm install                                       # install dependencies
+npm start                                         # start the browserify build + dev server
+```
+
+Then open `http://localhost:8080` in your browser.
 
 
 ## Overview

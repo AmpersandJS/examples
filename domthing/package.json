@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "beefy -t domthingify app.js"
+    "build": "watchify app.js -d -o build/app.bundle.js",
+    "start": "npm run build & http-server ."
   },
   "browserify": {
     "transform": [
@@ -17,10 +18,11 @@
     "ampersand-domthing-mixin": "^0.1.0",
     "ampersand-state": "^4.4.1",
     "ampersand-view": "^7.2.0",
-    "domthing": "^0.3.1"
+    "domthing": "^0.3.1",
+    "domthingify": "^0.2.0"
   },
   "devDependencies": {
-    "beefy": "^2.1.1",
-    "domthingify": "^0.2.0"
+    "http-server": "^0.7.4",
+    "watchify": "^2.1.1"
   }
 }
