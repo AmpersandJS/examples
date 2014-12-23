@@ -1,0 +1,11 @@
+{
+  "name": "requirejs-ampersand",
+  "version": "0.0.0",
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "lodash": "~2.4.1",
+    "backbone": "~1.1.0",
+    "requirejs": "~2.1.15"
+  },
+  "devDependencies": {}
+}
