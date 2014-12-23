@@ -5,20 +5,26 @@ Perhaps you have a project that uses Backbone and Require.js.  You've just found
 This example will show you one way to bring in ampersand modules into your project relatively easily.  There are other ways, notably the require.js [packages](http://requirejs.org/docs/api.html#packages) syntax, but I've found this does not work with dependencies very well.  
 
 ## Installation:
-If you don't have bower installed yet:  `npm install -g bower`
+If you don't have bower installed yet: 
+`npm install -g bower`
+
 Then install your dependencies:
+
 `bower install`
+
 `npm install`
 
 Run the build:
+
 `gulp bundleAmpersand`
 
 Serve your project:
+
 `node server.js`
 
 Open your browser to [localhost:8000](http://localhost:8000)
 
-## highlights
+## How it works
 The basic premise is you create a `ampersand-proto.js` file that contains which ampersand projects you'd like to use in common.js format.  (Note you can use this method to do almost any common.js package in your require.js build too!)
 ```javascript
 module.exports = {
