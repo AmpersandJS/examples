@@ -1,0 +1,25 @@
+<div class="hoodie-accountbar">
+
+  <div class="hoodie-account-signedout">
+            <span class="btn-group">
+              <button class="btn btn-small btn-primary" data-hoodie-action="signup">Sign Up</button>
+              <button class="btn btn-small btn-primary" data-hoodie-action="signin">Sign In</button>
+            </span>
+  </div><!-- /.hoodie-account-signedout -->
+
+  <div class="hoodie-account-signedin">
+    Hello,
+    <span class="hoodie-username"><!-- usern name will be filled in here --></span>
+            <span class="btn-group">
+              <button class="btn btn-small btn-primary" data-hoodie-action="signout">Sign Out</button>
+            </span>
+  </div><!-- /.hoodie-account-signedin -->
+
+  <div class="hoodie-account-error">
+    Hello,
+    <span class="hoodie-username"><!-- username will be filled in here --></span>.
+            <span class="btn-group">
+              <button class="btn btn-small btn-danger" data-hoodie-action="signin">Authentication error: Sign in again</button>
+            </span>
+  </div><!-- /.hoodie-account-error -->
+</div>
