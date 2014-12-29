@@ -1,0 +1,30 @@
+<section class="page pageOne">
+  <h2>Collection demo</h2>
+  <p>Intelligently rendering collections can be a bit tricky.</p>
+
+  <p>
+    <a href="https://github.com/ampersandjs/ampersand-view">ampersand-view's</a>
+    <code>renderCollection()</code> method makes it simple.
+  </p>
+
+  <p>The only code required to manage the collection is:</p>
+  <pre><code>this.renderCollection(
+  this.collection,
+  PersonView,
+  this.queryByHook('people-list')
+);</code></pre>
+
+  <h3>People container:</h3>
+  <ul class="list-group" data-hook="people-list"></ul>
+
+  <p>Try it by clicking the buttons</p>
+
+  <div class="buttons btn-group">
+    <button class="btn btn-default" data-hook="reset">.reset()</button>
+    <button class="btn btn-default" data-hook="fetch">.fetch()</button>
+    <button class="btn btn-default" data-hook="shuffle">.shuffle()</button>
+    <a href="/person/add" class="btn btn-default">Add Person</a>
+  </div>
+
+  <p>Events are always managed so you don't get any leaks.</p>
+</section>
