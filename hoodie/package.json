@@ -1,0 +1,68 @@
+{
+  "name": "ampersand-hoodie-example",
+  "version": "0.1.2",
+  "type": "app",
+  "dependencies": {
+    "ampersand-collection": ">=1.3.17",
+    "ampersand-collection-underscore-mixin": ">=1.0.3",
+    "ampersand-dom": ">=1.2.1",
+    "ampersand-form-view": ">=1.0.0",
+    "ampersand-hoodie-collection": ">=0.0.2",
+    "ampersand-hoodie-model": ">=0.0.2",
+    "ampersand-input-view": ">=1.2.3",
+    "ampersand-model": ">=4.0.0",
+    "ampersand-router": ">=1.0.1",
+    "ampersand-view": ">=7.0.0",
+    "ampersand-view-switcher": ">=1.0.2",
+    "domify": "^1.3.1",
+    "domready": "^1.0.7",
+    "extend-object": "^1.0.0",
+    "favicon-setter": "^0.1.1",
+    "hoodie": "^1.0.0",
+    "hoodie-plugin-appconfig": "^2.0.1",
+    "hoodie-plugin-email": "^1.0.0",
+    "hoodie-plugin-users": "^2.1.0",
+    "hoodie-server": "^2.0.0",
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "browserify": "^7.0.3",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.2.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-debug-task": "^0.1.5",
+    "grunt-html-convert": "0.0.1",
+    "jshint-stylish": "^1.0.0"
+  },
+  "files": [
+    "www/"
+  ],
+  "engines": {
+    "node": ">=0.10.22"
+  },
+  "scripts": {
+    "start": "node node_modules/hoodie-server/bin/start"
+  },
+  "hoodie": {
+    "plugins": [
+      "hoodie-plugin-appconfig",
+      "hoodie-plugin-email",
+      "hoodie-plugin-users"
+    ]
+  },
+  "description": "## Installation",
+  "maintainers": [
+    {
+      "name": "mike",
+      "email": "mikehedman@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mikehedman/ampersand-hoodie-example.git"
+  },
+  "scripts": {
+    "start": "node node_modules/hoodie-server/bin/start"
+  }
+}
