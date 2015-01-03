@@ -12,6 +12,7 @@ var templates = require('../templates');
 var tracking = require('../helpers/metrics');
 var setFavicon = require('favicon-setter');
 var InfoDialog = require('./dialogs/info');
+var MessageDialog = require('./dialogs/message');
 
 
 module.exports = View.extend({
@@ -78,6 +79,14 @@ module.exports = View.extend({
     showModal: function (view, done) {
         view.listenTo(view, "dialog:closed", done);
         this.modalSwitcher.set(view);
+    },
+
+    showMessageDialog: function(messageTitle, message) {
+        var dialog = new MessageDialog({
+            messageTitle: messageTitle,
+            message: message
+        });
+        this.showModal(dialog);
     },
 
     handleLinkClick: function (e) {

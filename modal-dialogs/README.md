@@ -20,3 +20,5 @@ The key elements:
 * In /client/views/dialogs is base-dialog.js.  All dialogs should extend base-dialog.  
 * The info view has a click handler to listen for close actions (user clicking the X in the corner, or pressing the cancel button). 
 * The body template needs a new div to be a container for displayed dialogs.
+
+The third commit in this repo is an example of using a modal dialog to display messages passed to a utility function.  On the right side of the home screen is a "Show alert" button that displays a simple message box.
