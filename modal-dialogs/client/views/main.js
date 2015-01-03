@@ -11,6 +11,7 @@ var dom = require('ampersand-dom');
 var templates = require('../templates');
 var tracking = require('../helpers/metrics');
 var setFavicon = require('favicon-setter');
+var InfoDialog = require('./dialogs/info');
 
 
 module.exports = View.extend({
@@ -20,9 +21,11 @@ module.exports = View.extend({
         this.listenTo(app.router, 'page', this.handleNewPage);
     },
     events: {
-        'click a[href]': 'handleLinkClick'
+        'click a:not([href="#"])': 'handleLinkClick',
+        'click [data-hook=info]': 'handleInfoClick'
     },
     render: function () {
+        var self = this;
         // some additional stuff we want to add to the document head
         document.head.appendChild(domify(templates.head()));
 
@@ -44,17 +47,37 @@ module.exports = View.extend({
             }
         });
 
+        this.modalSwitcher = new ViewSwitcher(this.queryByHook("modal-container"), {
+            show: function (view) {
+                dom.addClass(document.body, "has-modal");  //TODO, I don't see where/how this is used
+                view.listenTo(view, "dialog:closed", function () {
+                    self.modalSwitcher.clear();
+                });
+            }, hide: function () {
+                dom.removeClass(document.body, "has-modal");  //TODO, I don't see where/how this is used
+            }
+        });
+
         // setting a favicon for fun (note, it's dynamic)
         setFavicon('/images/ampersand.png');
         return this;
     },
 
     handleNewPage: function (view) {
+        if (this.modalSwitcher.current) {
+            this.modalSwitcher.clear();
+        }
+
         // tell the view switcher to render the new one
         this.pageSwitcher.set(view);
 
         // mark the correct nav item selected
         this.updateActiveNav();
+    },
+
+    showModal: function (view, done) {
+        view.listenTo(view, "dialog:closed", done);
+        this.modalSwitcher.set(view);
     },
 
     handleLinkClick: function (e) {
@@ -69,10 +92,17 @@ module.exports = View.extend({
         }
     },
 
+    handleInfoClick: function (e) {
+        //prevent the '#' from the a tag from showing up in the address bar
+        e.preventDefault();
+        var infoDialog =  new InfoDialog();
+        app.view.showModal(infoDialog);
+    },
+
     updateActiveNav: function () {
         var path = window.location.pathname.slice(1);
 
-        this.queryAll('.nav a[href]').forEach(function (aTag) {
+        this.queryAll('.nav a:not([href="#"])').forEach(function (aTag) {
             var aPath = aTag.pathname.slice(1);
 
             if ((!aPath && !path) || (aPath && path.indexOf(aPath) === 0)) {

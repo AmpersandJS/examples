@@ -1,23 +1,22 @@
-# Modal Dialog Example
+# Modal Dialogs Example
+This example presents a way to display modal dialog boxes in an Ampersand app.
 
-This app was generated with the [ampersand cli tool](http://ampersandjs.com/learn/quick-start-guide).
+The code and concepts for this demo were (lovingly) lifted from the [andyou.talkie.io](https://andyou.talky.io/) app.
 
-## How to run it
+## Installation
 
-1. download/install [node.js](http://nodejs.org/)
-1. install dependencies: `npm install`
-1. run it: `npm start`
-1. open http://localhost:3000 in a browser
+* clone this repository
+* `$ npm install`
+* `$ npm start`
 
-## How it's structured
+Open a browser to the URL output in the terminal when the app starts up, typically (http://localhost:3000)
 
-See docs: http://ampersandjs.com/
-Curated modules: http://tools.ampersandjs.com/
+Once the app is running in your browser, click on the "more info" tab.  Instead of navigating to its own page, it will be displayed in a modal overlay.  Close the info dialog, and your previous page is still active.
 
-## Credits
-
-Built by folks at [&yet](http://andyet.com).
-
-## Want a deeper understanding?
-
-Get the book: http://humanjavascript.com
+## Notes
+To see the basic difference between the stock Ampersand generated app, and the modal enabled app, look at the second commit in this repo.
+The key elements:
+* In /client/views/main.js an additional ViewSwitcher instance was added to the app to handle the modals, and a convenience showModal() method is added to access the ViewSwitcher. 
+* In /client/views/dialogs is base-dialog.js.  All dialogs should extend base-dialog.  
+* The info view has a click handler to listen for close actions (user clicking the X in the corner, or pressing the cancel button). 
+* The body template needs a new div to be a container for displayed dialogs.

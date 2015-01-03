@@ -14,10 +14,12 @@
     var templatizer = {};
     templatizer["includes"] = {};
     templatizer["pages"] = {};
+    templatizer["views"] = {};
+    templatizer["views"]["dialogs"] = {};
 
     // body.jade compiled template
     templatizer["body"] = function tmpl_body() {
-        return '<body><nav class="navbar navbar-default"><div class="container-fluid"><div class="navbar-header"><a href="/" class="navbar-brand">Modal Dialog Example</a></div><ul class="nav navbar-nav"><li><a href="/">home</a></li><li><a href="/collections">collection demo</a></li><li><a href="/info">more info</a></li></ul></div></nav><div class="container"><main data-hook="page-container"></main></div></body>';
+        return '<body><nav class="navbar navbar-default"><div class="container-fluid"><div class="navbar-header"><a href="/" class="navbar-brand">Modal Dialog Example</a></div><ul class="nav navbar-nav"><li><a href="/">home</a></li><li><a href="/collections">collection demo</a></li><li><a data-hook="info" href="#">more info</a></li></ul></div></nav><div class="container"><main data-hook="page-container"></main></div><div data-hook="modal-container"></div></body>';
     };
 
     // head.jade compiled template
@@ -45,11 +47,6 @@
         return '<section class="page home"><h2>Welcome to a skeleton for Modal Dialog Example</h2><p>If you "view source" you\'ll see it\'s 100% client rendered.</p><p>Click around the site using the nav bar at the top. </p><p>Things to note:<ul><li>The url changes, no requests are made to the server.</li><li>Refreshing the page will always get you back to the same page</li><li>Page changes are nearly instantaneous</li><li>In development mode, you don\'t need to restart the server to see changes, just edit and refresh.</li><li>In production mode, it will serve minfied, uniquely named files with super agressive cache headers. To test:<ul> <li>in dev_config.json set <code>isDev</code> to <code>false</code>.</li><li>restart the server.</li><li>view source and you\'ll see minified css and js files with unique names.</li><li>open the "network" tab in chrome dev tools (or something similar). You\'ll also want to make sure you haven\'t disabled your cache.</li><li>without hitting "refresh" load the app again (selecting current URL in url bar and hitting "enter" works great).</li><li>you should now see that the JS and CSS files were both served from cache without making any request to the server at all.</li></ul></li></ul></p></section>';
     };
 
-    // pages/info.jade compiled template
-    templatizer["pages"]["info"] = function tmpl_pages_info() {
-        return '<section class="page pageTwo"><h2>Simple Page Example</h2><p>This page was rendered by a simple page view file at client/pages/info.js.</p></section>';
-    };
-
     // pages/personAdd.jade compiled template
     templatizer["pages"]["personAdd"] = function tmpl_pages_personAdd() {
         return '<section class="page add-person"><h2>Add Person</h2><p>This form and all behavior is defined by the form view in <code>client/forms/person.js</code>.</p><p>The same form-view is used for both editing and creating new users.</p><form data-hook="person-form"><fieldset data-hook="field-container"></fieldset><div class="buttons"><button data-hook="reset" type="submit" class="btn">Submit</button></div></form></section>';
@@ -63,6 +60,11 @@
     // pages/personView.jade compiled template
     templatizer["pages"]["personView"] = function tmpl_pages_personView() {
         return '<section class="page view-person"><h2 data-hook="name"></h2><img data-hook="avatar" width="80" height="80"/><div class="buttons"><a data-hook="edit" class="btn">Edit</a><button data-hook="delete" class="btn">Delete</button></div></section>';
+    };
+
+    // views/dialogs/info.jade compiled template
+    templatizer["views"]["dialogs"]["info"] = function tmpl_views_dialogs_info() {
+        return '<div class="dialog dialog-info dialog-center"><div class="dialog-container"><h2>Simple Page Example</h2><p>This page was rendered by a simple view file at client/views/dialogs/info.js.</p><div class="dialog-button-container"><a data-hook="close" class="btn btn-default">Cancel</a></div><div class="dialog-close"><a data-hook="close" title="close dialog">&times;</a></div></div></div>';
     };
 
     return templatizer;
