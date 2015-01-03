@@ -64,7 +64,7 @@
 
     // views/dialogs/info.jade compiled template
     templatizer["views"]["dialogs"]["info"] = function tmpl_views_dialogs_info() {
-        return '<div class="dialog dialog-info dialog-center"><div class="dialog-container"><h2>Simple Page Example</h2><p>This page was rendered by a simple view file at client/views/dialogs/info.js.</p><div class="dialog-button-container"><a data-hook="close" class="btn btn-default">Cancel</a></div><div class="dialog-close"><a data-hook="close" title="close dialog">&times;</a></div></div></div>';
+        return '<div class="dialog dialog-info dialog-center"><div class="dialog-container"><div class="dialog-close"><a data-hook="close" title="close dialog">&times;</a></div><h2>Simple Page Example</h2><p>This page was rendered by a simple view file at client/views/dialogs/info.js.</p><div class="dialog-button-container"><a data-hook="close" class="btn btn-default">Cancel</a></div></div></div>';
     };
 
     return templatizer;
