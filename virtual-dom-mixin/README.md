@@ -14,10 +14,3 @@ This app is an [ampersand-virtual-dom-mixin](https://github.com/AmpersandJS/ampe
 See docs: http://ampersandjs.com/
 https://github.com/AmpersandJS/ampersand-virtual-dom-mixin
 
-## Credits
-
-Built by folks at [&yet](http://andyet.com).
-
-## Want a deeper understanding?
-
-Get the book: http://humanjavascript.com
