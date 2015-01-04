@@ -4,10 +4,8 @@ var logger = require('andlog');
 var config = require('clientconfig');
 
 var Router = require('./router');
-var tracking = require('./helpers/metrics');
 var MainView = require('./views/main');
 var Me = require('./models/me');
-var People = require('./models/persons');
 var domReady = require('domready');
 
 
@@ -16,9 +14,8 @@ module.exports = {
     blastoff: function () {
         var self = window.app = this;
 
-        // create our global 'me' object and an empty collection for our people models.
+        // create our global 'me' object
         window.me = new Me();
-        this.people = new People();
 
         // init our URL handlers and the history tracker
         this.router = new Router();

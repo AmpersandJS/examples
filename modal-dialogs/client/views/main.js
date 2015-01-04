@@ -9,7 +9,6 @@ var _ = require('underscore');
 var domify = require('domify');
 var dom = require('ampersand-dom');
 var templates = require('../templates');
-var tracking = require('../helpers/metrics');
 var setFavicon = require('favicon-setter');
 var InfoDialog = require('./dialogs/info');
 var MessageDialog = require('./dialogs/message');
