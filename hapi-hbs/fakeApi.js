@@ -44,9 +44,7 @@ function get(id) {
   return _.findWhere(people, {id: parseInt(id + '', 10)});
 }
 
-exports.name = 'fake_api';
-exports.version = '0.0.0';
-exports.register = function (plugin, options, next) {
+module.exports = function (plugin, options, next) {
   plugin.route({
     method: 'GET',
     path: '/api/people',
@@ -96,4 +94,9 @@ exports.register = function (plugin, options, next) {
   });
 
   next();
+};
+
+module.exports.attributes = {
+  version: '0.0.0',
+  name: 'fake_api'
 };
