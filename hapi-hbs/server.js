@@ -4,7 +4,7 @@ var config          = require('getconfig');
 var moonbootsConfig = require('./moonbootsConfig');
 var fakeApi         = require('./fakeApi');
 
-var server          = new Hapi.Server(config.http.listen, config.http.port);
+var server          = new Hapi.Server();
 var internals       = {};
 
 internals.configStateConfig = {
@@ -13,6 +13,7 @@ internals.configStateConfig = {
   isSecure: config.isSecure
 };
 
+server.connection({ host: config.http.listen, port: config.http.port });
 server.state('config', internals.configStateConfig);
 internals.clientConfig = JSON.stringify(config.client);
 
@@ -22,23 +23,18 @@ server.ext('onPreResponse', function(request, reply) {
     return reply(response.state('config', encodeURIComponent(internals.clientConfig)));
   }
   else {
-    return reply();
+    return reply.continue();
   }
 });
 
-server.pack.register({
-  plugin  : require('moonboots_hapi'),
-  options : moonbootsConfig
-},
-function (err) {
-  if (err) throw err;
-
-  server.pack.register(fakeApi, function (err) {
+server.register({ register: require('moonboots_hapi').register, options: moonbootsConfig }, function (err) {
     if (err) throw err;
-
-    server.start(function (err) {
-      if (err) throw err;
-      console.log('Hapi Handlebars Example. is running at: http://localhost:' + config.http.port + ' Yep. That\'s pretty awesome.');
+    server.register(fakeApi, function (err) {
+        if (err) throw err;
+        // If everything loaded correctly, start the server:
+        server.start(function (err) {
+            if (err) throw err;
+            console.log('Hapi Handlebars Example. is running at: http://localhost:' + config.http.port);
+        });
     });
-  });
 });

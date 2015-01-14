@@ -21,8 +21,8 @@
     "favicon-setter": "^0.1.1",
     "getconfig": "^1.0.0",
     "handlebars": "^2.0.0",
-    "hapi": "^6.0.2",
-    "moonboots_hapi": "^2.4.0",
+    "hapi": "^8.0.0",
+    "moonboots_hapi": "^4.0.0",
     "stylizer": "^1.0.0",
     "templatizer": "^1.0.0",
     "underscore": "^1.6.0"
