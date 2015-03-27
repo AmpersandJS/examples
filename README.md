@@ -1,6 +1,8 @@
 # examples patterns recipes
 
-We're starting this collection of patterns and approaches submitted by the community for building with [Ampersand.js](http://ampersandjs.com).
+Lead Maintainer: [Drew Fyock](https://github.com/fyockm)
+
+A collection of patterns and approaches submitted by the community for building with [Ampersand.js](http://ampersandjs.com).
 
 Each top-level folder contains an example and a readme explaining the example.
 
