@@ -73,6 +73,8 @@ app.use('/api*', function(req, res, next){
     next();
   }
   else{
+    // If we get here then the token is invalid.
+    // This is where, depending on your setup, you can send a 401 back or force the request to a login page.
     res.status(401).send();
   }
 });
