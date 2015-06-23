@@ -1,0 +1,6 @@
+node_modules
+public/
+client/modules
+client/libraries
+client/templates.js
+test/*

@@ -1,0 +1,12 @@
+section.page.edit-person
+  
+  h2 Edit Person
+
+  p This form and all behavior is defined by the form view in <code>client/forms/person.js</code>.
+
+  p The same form-view is used for both editing and creating new users.
+
+  form(data-hook="person-form")
+    fieldset(data-hook="field-container")
+    .buttons
+      button.btn(data-hook="reset", type="submit") Submit
