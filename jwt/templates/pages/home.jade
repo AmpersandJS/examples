@@ -1,21 +1,9 @@
 section.page.home
-  h2 Welcome to a skeleton for JSON Web Tokens
+  h2 JWT's in Ampersand
 
-  p If you "view source" you'll see it's 100% client rendered.
+  p Your login token is:
+  p(data-hook="loginToken")
 
-  p Click around the site using the nav bar at the top. 
+  p You are seeing this page because you have a valid login token. To validate the token before the page was rendered we made a request to the API to load Admin Root's user details. If your model extends the baseModel then every request made to the API will have the token in the header.
 
-  p Things to note:
-    ul
-      li The url changes, no requests are made to the server.
-      li Refreshing the page will always get you back to the same page
-      li Page changes are nearly instantaneous
-      li In development mode, you don't need to restart the server to see changes, just edit and refresh.
-      li In production mode, it will serve minfied, uniquely named files with super agressive cache headers. To test:
-        ul 
-          li in dev_config.json set <code>isDev</code> to <code>false</code>.
-          li restart the server.
-          li view source and you'll see minified css and js files with unique names.
-          li open the "network" tab in chrome dev tools (or something similar). You'll also want to make sure you haven't disabled your cache.
-          li without hitting "refresh" load the app again (selecting current URL in url bar and hitting "enter" works great).
-          li you should now see that the JS and CSS files were both served from cache without making any request to the server at all.
+  p Please review the app.js to see the implementation details.

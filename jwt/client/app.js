@@ -1,10 +1,8 @@
 var app = require('ampersand-app');
 var _ = require('lodash');
-var config = require('clientconfig');
 var Router = require('./router');
 var MainView = require('./views/main');
 var Me = require('./models/me');
-var People = require('./models/persons');
 var domReady = require('domready');
 var bind = require('amp-bind');
 
@@ -19,7 +17,6 @@ app.extend({
     id: window.sessionStorage.user,
     token: window.sessionStorage.token
   }),
-  people: new People(),
   router: new Router(),
   // This is where it all starts
   init: function() {
