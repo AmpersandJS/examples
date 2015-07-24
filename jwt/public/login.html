@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ampersand JWT Example Login Page</title>
+    <link href="styles/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container" style="margin-top: 200px;">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <form>
+                    <p><b>Username:</b> admin <b>Password:</b> root</p>
+                    <div class="form-group">
+                        <label for="txtUsername">Username</label>
+                        <input type="text" class="form-control" id="txtUsername" value="admin">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPassword">Password</label>
+                        <input type="password" class="form-control" id="txtPassword" value="root">
+                    </div>
+                    <button type="button" id="btnLogin" class="btn btn-default">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+    $('#btnLogin').click(function(){
+        var username = $('#txtUsername').val();
+        var password = $('#txtPassword').val();
+
+        $.ajax('/login', {
+            method: 'POST',
+            data: {
+                username: username,
+                password: password
+            }
+        }).fail(function(xhr, status, err){
+            alert('Invalid login request');
+            console.log(xhr);
+            console.log(status);
+            console.log(err);
+        }).done(function(data){
+            var user = data.user;
+            var token = data.token;
+
+            window.sessionStorage.user = user;
+            window.sessionStorage.token = token;
+
+            window.location = '/';
+        });
+    });
+</script>
+</body>
+</html>

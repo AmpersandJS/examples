@@ -1,0 +1,9 @@
+section.page.home
+  h2 JWT's in Ampersand
+
+  p Your login token is:
+  p(data-hook="loginToken")
+
+  p You are seeing this page because you have a valid login token. To validate the token before the page was rendered we made a request to the API to load Admin Root's user details. If your model extends the baseModel then every request made to the API will have the token in the header.
+
+  p Please review the app.js to see the implementation details.
