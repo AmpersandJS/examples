@@ -1,0 +1,46 @@
+* {
+  background: rgba(0,0,0,0.05);
+}
+body {
+  background: #fff;
+}
+ul {
+  *zoom: 1;
+  width: auto;
+  max-width: 900px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+ul:before,
+ul:after {
+  content: '';
+  display: table;
+}
+ul:after {
+  clear: both;
+}
+ul li {
+  list-style-type: none;
+  *zoom: 1;
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333333333333%;
+  margin-left: 0%;
+  margin-right: 3%;
+}
+ul li:before,
+ul li:after {
+  content: '';
+  display: table;
+}
+ul li:after {
+  clear: both;
+}
+ul li:last-child {
+  margin-right: 0%;
+}
