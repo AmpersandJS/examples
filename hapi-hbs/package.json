@@ -2,16 +2,16 @@
   "name": "hapi-hbs",
   "author": "Matt Hernandez <matt@modulus.io>",
   "version": "0.0.0",
-  "main": "server.js",
   "dependencies": {
+    "ampersand-app": "^1.0.0",
     "ampersand-dom": "^1.2.1",
-    "ampersand-form-view": "^2.0.0",
-    "ampersand-input-view": "^2.0.0",
-    "ampersand-model": "^4.0.0",
-    "ampersand-rest-collection": "^2.0.0",
-    "ampersand-router": "^1.0.1",
+    "ampersand-form-view": "^3.1.1",
+    "ampersand-input-view": "^4.0.5",
+    "ampersand-model": "^5.0.3",
+    "ampersand-rest-collection": "^4.0.0",
+    "ampersand-router": "^3.0.1",
     "ampersand-view": "^7.0.1",
-    "ampersand-view-switcher": "^1.0.2",
+    "ampersand-view-switcher": "^2.0.0",
     "andlog": "^1.0.0",
     "async": "^0.9.0",
     "browserify-handlebars": "^1.0.0",
@@ -19,11 +19,13 @@
     "domify": "^1.3.0",
     "domready": "^1.0.5",
     "favicon-setter": "^0.1.1",
-    "getconfig": "^1.0.0",
+    "getconfig": "^2.1.0",
     "handlebars": "^2.0.0",
     "hapi": "^8.0.0",
+    "local-links": "^1.2.0",
+    "lodash": "^4.0.0",
     "moonboots_hapi": "^4.0.0",
-    "stylizer": "^1.0.0",
+    "stylizer": "^2.1.0",
     "templatizer": "^1.0.0",
     "underscore": "^1.6.0"
   },
@@ -39,5 +41,6 @@
     "trailing": true,
     "undef": true,
     "white": true
-  }
+  },
+  "main": "server.js"
 }
